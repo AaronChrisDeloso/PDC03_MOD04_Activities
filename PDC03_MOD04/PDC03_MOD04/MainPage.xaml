@@ -10,7 +10,7 @@
 
         <Button Clicked="Activity01" Text="Activity 1 : Listview" BackgroundColor="LightBlue" CornerRadius="25"/>
         <Button Clicked="Activity02" Text="Activity 2 : Listview - Itemsource" BackgroundColor="LightBlue" CornerRadius="25"/>
-        <Button Clicked="Activity01" Text="Activity 3" BackgroundColor="LightBlue" CornerRadius="25"/>
+        <Button Clicked="Activity03" Text="Activity 3 : CollectionView - Itemsource" BackgroundColor="LightBlue" CornerRadius="25"/>
     </StackLayout>
 
 </ContentPage>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD04.Activity3" Title="CollectionView - Itemsource">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Collection View!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                    FontAttributes="Bold"
+                   FontSize="Large"/>
+            <Frame CornerRadius="25" Margin="10" BackgroundColor="LightBlue">
+            <CollectionView x:Name="MemberView" ItemsSource="{Binding Members}"
+                            SelectionMode="Multiple">
+
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="6" HorizontalItemSpacing="6"/>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="5">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+  
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.RowSpan="2" 
+                                   Source="{Binding Image}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60"
+                                   />
+                            <Label Grid.Column="1"
+                                   Text="{Binding DisplayName}"
+                                   FontAttributes="Bold" TextColor="Blue"
+                                   FontSize="Medium"/>
+                            <Label Grid.Row="1" Grid.Column="1"
+                                   Text="{Binding Position}" TextColor="Black"/>
+
+                        </Grid>
+
+
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+
+            </CollectionView>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
