@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PDC03_MOD04.Activity2"
+             Title="Listview - Itemsource">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Member List!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontAttributes="Bold"
+                   FontSize="Large"/>
+
+
+
+
+            <ListView x:Name="MemberView"
+                      ItemsSource="{Binding Members}"
+                      RowHeight="100">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <ImageCell ImageSource="{Binding Image}"  Text="{Binding DisplayName}" TextColor="Black" Detail="{Binding Position}" DetailColor="Red"/>
+
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
